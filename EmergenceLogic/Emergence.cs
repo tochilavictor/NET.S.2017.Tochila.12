@@ -36,13 +36,12 @@ namespace EmergenceLogic
         }
         public void NewShake(int timetoshake, EarthShakeEventArgs args)
         {
-            Thread.Sleep(timetoshake);
-            if (ReferenceEquals(args, null)) throw new ArgumentException();
-            OnEarthShake(this, args);
+            NewShake(timetoshake,args.Country,args.Grade);
         }
         public void NewShake(int timetoshake, string country, int grade)
         {
-            if(timetoshake<0) throw new ArgumentException();
+            if (string.IsNullOrEmpty(country)) throw new ArgumentException();
+            if (timetoshake<0) throw new ArgumentException();
             int notificationInterval = 1000;
             while (timetoshake > notificationInterval)
             {
@@ -52,7 +51,7 @@ namespace EmergenceLogic
             }
             Console.WriteLine("Event will happen in "+ timetoshake +" miliseconds");
             Thread.Sleep(timetoshake);
-            if (string.IsNullOrEmpty(country)) throw new ArgumentException();
+           
             OnEarthShake(this, new EarthShakeEventArgs(country, grade));
         }
     }
