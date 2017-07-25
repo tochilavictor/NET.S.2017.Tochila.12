@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmergenceLogic", "Emergence
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleUI", "ConsoleUI\ConsoleUI.csproj", "{EA804B58-8B31-4F91-A2F9-8D090C9EEFEC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArrayLogic", "ArrayLogic\ArrayLogic.csproj", "{F1AE1570-5566-4A4A-8CF4-4265AEB2F541}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{EA804B58-8B31-4F91-A2F9-8D090C9EEFEC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EA804B58-8B31-4F91-A2F9-8D090C9EEFEC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EA804B58-8B31-4F91-A2F9-8D090C9EEFEC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F1AE1570-5566-4A4A-8CF4-4265AEB2F541}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F1AE1570-5566-4A4A-8CF4-4265AEB2F541}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F1AE1570-5566-4A4A-8CF4-4265AEB2F541}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F1AE1570-5566-4A4A-8CF4-4265AEB2F541}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

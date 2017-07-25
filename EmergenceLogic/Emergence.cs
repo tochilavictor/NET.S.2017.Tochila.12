@@ -16,7 +16,7 @@ namespace EmergenceLogic
             if (string.IsNullOrEmpty(country)) throw new ArgumentException();
             this.country = country;
             if (grade < 0) this.grade = 0;
-            else if (grade > 10) this.grade = 10;
+            else if (grade > 12) this.grade = 12;
             else { this.grade = grade; }
         }
 
@@ -34,10 +34,21 @@ namespace EmergenceLogic
             EventHandler<EarthShakeEventArgs> tmp = EarthShake;
             tmp?.Invoke(sender, args);
         }
+        /// <summary>
+        /// simulate new earthshake
+        /// </summary>
+        /// <param name="timetoshake">time to event in miliseconds</param>
+        /// <param name="args">event arguments</param>
         public void NewShake(int timetoshake, EarthShakeEventArgs args)
         {
             NewShake(timetoshake,args.Country,args.Grade);
         }
+        /// <summary>
+        /// simulate new earthshake
+        /// </summary>
+        /// <param name="timetoshake">time to event in miliseconds</param>
+        /// <param name="country">country, where event will happen</param>
+        /// <param name="grade">points of earthshake (0 to 12)</param>
         public void NewShake(int timetoshake, string country, int grade)
         {
             if (string.IsNullOrEmpty(country)) throw new ArgumentException();
