@@ -18,6 +18,9 @@ namespace ArrayLogic
         /// <returns>position of element, -1 if such element dont't exists in array</returns>
         public static int BinarySearch<T>(this T[] array, T element, IComparer<T> comparer)
         {
+            if(array==null) throw new ArgumentNullException();
+            if(array.Length==0) throw new ArgumentException();
+            if (comparer==null) throw new ArgumentNullException();
             int left = 0;
             int right = array.Length - 1;
             while (left <= right)
